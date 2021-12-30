@@ -1,4 +1,4 @@
-# Coin Change
+# Coin Change 2
 ## https://leetcode.com/problems/coin-change-2
 
 You are given an integer array coins representing coins of different denominations and an integer amount representing a total amount of money.
@@ -73,3 +73,5 @@ class Solution {
 # References :
 https://www.youtube.com/watch?v=nCwfxw3GH-g
 
+## Similar Problem :
+https://leetcode.com/problems/coin-change
