@@ -21,11 +21,11 @@ class Solution {
 
 	for (int i = 1; i <= coins.length; i++) {
 	   for (int j = 1; j <= amount; j++) {
-		 if (coins[i - 1] > j) {
-			dpTable[i][j] = dpTable[i - 1][j];
-		  } else {
-			dpTable[i][j] = dpTable[i - 1][j] + dpTable[i][j - coins[i - 1]];
-		  }
+		if (coins[i - 1] > j) {
+		    dpTable[i][j] = dpTable[i - 1][j];
+		} else {
+		    dpTable[i][j] = dpTable[i - 1][j] + dpTable[i][j - coins[i - 1]];
+		}
 	   }
 	}
 	return dpTable[coins.length][amount];
