@@ -70,6 +70,9 @@ class Solution {
 }
 ```
 
+## Notes :
+This problem is same as https://github.com/eMahtab/combination-sum , the only difference is, here we just need to find out how many ways we can make the change, we don't need the actual coin combination which sum to target, just the total number of ways to make the target change.
+
 # References :
 https://www.youtube.com/watch?v=nCwfxw3GH-g
 
