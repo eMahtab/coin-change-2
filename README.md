@@ -72,6 +72,27 @@ class Solution {
 
 ## Notes :
 This problem is same as https://github.com/eMahtab/combination-sum , the only difference is, here we just need to find out how many ways we can make the change, we don't need the actual coin combination which sum to target, just the total number of ways to make the target change.
+#### Recursive solution same as Combination Sum : But TLE
+```java
+class Solution {
+    public int change(int amount, int[] coins) {
+       int[] result = new int[1];
+       findCombination(coins, amount, 0, result);
+       return result[0];
+    }
+    private void findCombination(int[] candidates, int target, int index, int[] result) {
+        if(target == 0) {
+    	    result[0]++;
+    	    return;
+    	}
+    	for(int i = index; i < candidates.length; i++) {
+    	    if(candidates[i] <= target) {
+    	       findCombination(candidates, target - candidates[i], i, result);
+    	    }   
+    	}
+    }
+}
+```
 
 # References :
 https://www.youtube.com/watch?v=nCwfxw3GH-g
